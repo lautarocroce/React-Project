@@ -1,15 +1,16 @@
+import { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-  const dravik = { isFollowing: true, userName: 'dravik' }
-  const vik = { isFollowing: false, userName: 'vikito' }
+  const dravik = { userName: 'dravik' }
+  const vik = { userName: 'vikito' }
   return (
     <section className='App'>
-      <TwitterFollowCard isFollowing userName="midudev">
+      <TwitterFollowCard userName="midudev" inicialIsFollowing={true}>
         Miguel Ángel
       </TwitterFollowCard>
-      <TwitterFollowCard isFollowing={false} userName="midudev">
+      <TwitterFollowCard userName="midudev">
         Lautaro Manuel
       </TwitterFollowCard>
       <TwitterFollowCard {...dravik}>
